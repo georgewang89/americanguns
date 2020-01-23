@@ -3,6 +3,7 @@ import pandas as pd
 import numpy as np
 import time
 
+
 # ================================================== DOWNLOAD DATA ================================================== #
 #!/usr/bin/env python
 
@@ -19,6 +20,7 @@ from sodapy import Socrata
 
 # Example authenticated client (needed for non-public datasets):
 
+
 Domain = "data.cityofnewyork.us"
 MyAppToken = "sImMGfdNFQ3dR1fQm1vr7nMTS"
 
@@ -28,6 +30,7 @@ client = Socrata(Domain,
 # First 2000 results, returned as JSON from API / converted to Python list of
 # dictionaries by sodapy.
 raw = client.get("833y-fsy8", limit=50000)
+
 
 # Convert to pandas DataFrame
 raw_df = pd.DataFrame.from_records(raw)
